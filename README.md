@@ -1,0 +1,3 @@
+# NextJS with MongoDB
+
+Empty

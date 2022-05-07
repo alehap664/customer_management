@@ -1,0 +1,14 @@
+@import './styles/index';
+
+// Atoms
+@import 'components/atoms/Heading';
+@import 'components/atoms/Text';
+
+// modu
+
+// organisms
+@import 'components/organisms/mainTable';
+@import 'components/organisms/mainTable/overide.css';
+@import 'components/organisms/section';
+
+// Template
