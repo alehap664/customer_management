@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "gen:component": "hygen components new"
+    "gen:component": "hygen component new"
   },
   "dependencies": {
     "ag-grid-community": "^27.2.1",

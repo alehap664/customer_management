@@ -1,3 +1,3 @@
 ---
-  to: renderer/src/components/<%= level %>/<%= name %>/index.scss
+  to: src/components/<%= level %>/<%= name %>/index.scss
 ---

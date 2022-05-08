@@ -1,5 +1,5 @@
 ---
-  to: renderer/src/components/<%= level %>/<%= name %>/index.tsx
+  to: src/components/<%= level %>/<%= name %>/index.tsx
 ---
 
 import type { NextPage } from 'next';
