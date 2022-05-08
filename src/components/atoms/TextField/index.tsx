@@ -9,6 +9,7 @@ interface TextFieldProps {
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
   value?: string | number;
   defaultValue?: string | number;
+  name?: string;
 }
 
 const TextField: NextPage<TextFieldProps> = ({
@@ -17,12 +18,14 @@ const TextField: NextPage<TextFieldProps> = ({
   onChange,
   value,
   defaultValue,
+  name,
 }) => {
   return (
     <InputWrapper size={size} modifiers={modifiers}>
       <input
         className={mapModifiers('a-textField', modifiers)}
         type="text"
+        name={name}
         onChange={onChange}
         value={value}
         defaultValue={defaultValue}

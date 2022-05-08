@@ -22,13 +22,10 @@ const MainLayout: NextPage<MainLayoutProps> = ({ children, title }) => {
             <a>Home</a>
           </Link>{' '}
           |{' '}
-          <Link href="/about">
-            <a>About</a>
+          <Link href="/createCustomer">
+            <a>Thêm khách hàng</a>
           </Link>{' '}
           |{' '}
-          <Link href="/initial-props">
-            <a>With Initial Props</a>
-          </Link>
         </nav>
       </header>
       {children}

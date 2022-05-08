@@ -1,7 +1,10 @@
 import axios, { AxiosRequestConfig, AxiosError, AxiosResponse } from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_APP_API_BASE_URL,
+  baseURL:
+    process.env.NODE_ENV === 'development'
+      ? process.env.NEXT_PUBLIC_APP_API_DEVELOP_URL
+      : process.env.NEXT_PUBLIC_APP_API_BASE_URL,
 });
 
 axiosInstance.interceptors.request.use(
