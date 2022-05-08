@@ -1,0 +1,94 @@
+$border-width: rem(2);
+
+@mixin hover-color() {
+  @each $name, $color in $colors-design {
+    $root: &;
+    &-#{$name}:hover {
+      #{$root}_fieldset {
+        border-color: $color;
+      }
+    }
+    &-#{$name} > {
+      input,
+      select,
+      textarea {
+        &:focus {
+          & + #{$root}_fieldset {
+            border-color: $color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.a-input {
+  $root: &;
+
+  display: inline-block;
+  position: relative;
+  padding: rem(2);
+
+  &:hover {
+    #{$root}_fieldset {
+      border-color: $davys-grey;
+    }
+  }
+
+  > {
+    input,
+    select,
+    textarea {
+      padding: rem(6) rem(8);
+      border: none;
+      outline: none;
+      position: relative;
+      z-index: 2;
+      border-radius: rem(4);
+
+      &:focus {
+        & + #{$root}_fieldset {
+          border-color: $davys-grey;
+        }
+      }
+    }
+  }
+
+  &-sm > {
+    input,
+    select,
+    textarea {
+      height: rem(28);
+    }
+  }
+
+  &-md > {
+    input,
+    select,
+    textarea {
+      height: rem(32);
+    }
+  }
+
+  &-lg > {
+    input,
+    select,
+    textarea {
+      height: rem(40);
+    }
+  }
+
+  &_fieldset {
+    border: $border-width solid $davys-grey;
+    border-radius: rem(4);
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @include hover-color();
+}
